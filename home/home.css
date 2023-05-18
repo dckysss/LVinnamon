@@ -94,6 +94,10 @@ body {
   color: var(--primary);
 }
 
+.popup .content p {
+  font-size: 1.25rem;
+}
+
 .cta {
   margin-top: 1rem;
   display: inline-block;
@@ -134,13 +138,13 @@ body {
   background: #aad5f6;
 }
 .slide-1 {
-  background: url("../img/bannerhome_1.png");
+  background: url("../img/bannerhome_1.jpg");
 }
 .slide-2 {
-  background: url("../img/bannerhome_1.png");
+  background: url("../img/bannerhome_2.jpg");
 }
 .slide-3 {
-  background: url("../img/bannerhome_1.png");
+  background: url("../img/bannerhome_3.jpg");
 }
 
 .slider {
