@@ -1,0 +1,134 @@
+:root {
+  --primary: #ad8e70;
+  --bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+}
+
+/* About Section */
+.about {
+  padding: 6rem 7%;
+  background-image: url("../img/header-location.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  color: var(--primary);
+}
+
+.about .container {
+  display: flex;
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.about .container .about-img {
+  flex: 1 1 30rem;
+}
+
+.about-img img {
+  width: 100%;
+  height: auto;
+}
+
+.about .container .content {
+  flex: 1 1 30rem;
+  height: auto;
+  padding: 0 1rem;
+}
+
+.about .container p {
+  /* margin-bottom: 0.8rem; */
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: justify;
+  color: var(--primary);
+}
+
+.content {
+  width: 20rem;
+  height: 25.2rem;
+  background: rgba(241, 219, 191, 0.431);
+  backdrop-filter: blur(10px);
+  border: 2px solid white;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+p {
+  padding-top: 1rem;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 786px) {
+  html {
+    font-size: 61.5%;
+  }
+
+  .about .container {
+    flex-wrap: wrap;
+  }
+
+  .about .container .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .container .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .container .content p {
+    font-size: 1.6rem;
+    text-align: justify;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}

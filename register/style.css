@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary: #ad8e70;
+  --bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  min-height: 100vh;
+  background: url(../img/header-bg.jpg) no-repeat;
+  background-size: cover;
+  padding: 0px 180px;
+}
+
+section {
+  max-width: 100%;
+  width: 38%;
+}
+
+.container1 {
+  color: rgb(255, 255, 255);
+}
+
+.container1 h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 3.4rem;
+}
+
+.container1 p {
+  line-height: 1.5rem;
+}
+
+.radioBtn {
+  display: flex;
+  gap: 5px;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  color: hsla(278, 6%, 39%, 0.979);
+}
+
+.radioBtn input {
+  width: 15px;
+  height: 15px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.radioBtn input:focus {
+  outline: none;
+}
+
+/* Region */
+.region {
+  margin-top: 10px;
+  color: hsla(278, 6%, 39%, 0.979);
+}
+
+.region select:focus {
+  outline: 1px solid #ad8e70;
+}
+
+.region option {
+  font-family: Poppins;
+  padding: 10px 15px;
+  color: hsla(278, 6%, 39%, 0.979);
+  font-weight: 600;
+}
+
+.region select {
+  display: inline-block;
+  width: 100%;
+  height: 35px;
+  padding: 0px 15px;
+  cursor: pointer;
+  color: hsla(278, 6%, 39%, 0.979);
+  border-radius: 0;
+  background: #fff;
+  /* appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: all 0.2s ease; */
+}
+
+#region {
+  width: 100%;
+  height: 3.5rem;
+  margin-top: 1.3rem;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 1px solid hsla(283, 3%, 43%, 0.281);
+  border-radius: 0.3rem;
+}
+
+/* Region End */
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px 0 0;
+  cursor: pointer;
+}
+
+.agreement {
+  display: flex;
+}
+
+form {
+  background-color: white;
+  margin-top: 5rem;
+  padding: 1.7rem 3rem 3rem 3rem;
+  border-radius: 0.65rem;
+  font-weight: 600;
+  box-shadow: 0px 8px 0px rgba(0, 0, 8, 0.192);
+}
+
+input {
+  width: 100%;
+  height: 3.5rem;
+  margin-top: 1.3rem;
+  padding-left: 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 1px solid hsla(283, 3%, 43%, 0.281);
+  border-radius: 0.3rem;
+}
+
+input:focus {
+  outline: 1px solid #ad8e70;
+  caret-color: #ad8e70;
+}
+
+button:focus {
+  outline: none;
+}
+
+input.invalid {
+  border-color: var(--clr-red) !important;
+  border-width: 2px !important;
+}
+
+.error {
+  border: 2px solid red;
+  background: url(../img/icon-error.svg) no-repeat;
+  background-position: 95% 50%;
+}
+
+.error-text {
+  font-size: 12px;
+  font-style: italic;
+  color: hsl(0, 100%, 74%);
+}
+
+.success {
+  border: 2px solid hsl(154, 59%, 51%);
+}
+
+.btn {
+  width: 100%;
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border: none;
+  height: 3.8rem;
+  border-radius: 0.3rem;
+  margin-top: 1.3rem;
+  margin-bottom: 1rem;
+  box-shadow: inset 0px -3px 0px rgba(0, 88, 50, 0.329);
+}
+
+.btn:hover {
+  background-color: hsl(152, 100%, 70%);
+  cursor: pointer;
+}
+
+form p {
+  color: hsla(246, 25%, 77%, 0.808);
+  font-size: 0.7rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+form a {
+  text-decoration: none;
+  color: #ad8e70;
+  font-weight: 600;
+}
+
+@media (max-width: 1600px) {
+  section {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1366px) {
+  section {
+    width: 50%;
+  }
+
+  .radioBtn input {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1260px) {
+  main {
+    padding: 0 70px;
+  }
+  section {
+    width: 90%;
+  }
+  input {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width: 960px) {
+  main {
+    flex-direction: column;
+    padding: 0 40px;
+    gap: 2rem;
+  }
+  section {
+    width: 75%;
+  }
+  .container1 {
+    text-align: center;
+    margin-right: 0;
+  }
+  .container1 h1 {
+    line-height: 2.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .container1 p {
+    line-height: 1.2rem;
+  }
+}
+
+@media (max-width: 760px) {
+  section {
+    width: 90%;
+  }
+}
+
+@media (max-width: 486px) {
+  main {
+    padding: 10px 10px;
+  }
+  .btn {
+    height: 3.2rem;
+  }
+  input {
+    margin-top: 0.5rem;
+    height: 3.2rem;
+  }
+}
