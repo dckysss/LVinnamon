@@ -71,6 +71,10 @@ body {
   cursor: pointer;
 }
 
+.popup-logo {
+  width: 4rem;
+}
+
 .popup .content {
   padding: 0.5rem 2rem;
   text-align: center;
