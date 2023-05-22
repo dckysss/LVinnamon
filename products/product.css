@@ -107,10 +107,6 @@ body {
   background-color: var(--second);
 }
 
-.add-to-cart a {
-  color: #000;
-}
-
 .card {
   display: inline-block;
   vertical-align: top;
