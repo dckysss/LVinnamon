@@ -166,13 +166,13 @@ input.invalid {
 }
 
 .error {
-  border: 2px solid red;
+  border: 0.125rem solid red;
   background: url(../img/icon-error.svg) no-repeat;
   background-position: 95% 50%;
 }
 
 .error-text {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: italic;
   color: hsl(0, 100%, 74%);
 }

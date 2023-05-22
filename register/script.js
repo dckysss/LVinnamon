@@ -5,6 +5,7 @@ const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const radioButtons = document.getElementsByName("gender");
+const regionSelect = document.getElementById("region");
 const checkbox = document.getElementById("terms");
 
 hamburger.onclick = () => {
@@ -25,12 +26,19 @@ form.addEventListener("submit", (e) => {
   var nameValue = nameInput.value.trim();
   var emailValue = emailInput.value.trim();
   var passwordValue = passwordInput.value.trim();
+  var regionValue = regionSelect.value;
   var pattern = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
+
+  var nameValidation = false;
+  var emailValidation = false;
+  var pwValidation = false;
+  var regionValidation = false;
 
   if (nameValue === "") {
     addErrorTo(nameInput, "Name cannot be empty");
   } else {
     success(nameInput);
+    nameValidation = true;
   }
 
   if (emailValue === "") {
@@ -39,6 +47,7 @@ form.addEventListener("submit", (e) => {
     addErrorTo(emailInput, "Looks like not an email (example: example@email.com)");
   } else {
     success(emailInput);
+    emailValidation = true
   }
 
   if (passwordValue === "") {
@@ -47,6 +56,18 @@ form.addEventListener("submit", (e) => {
     addErrorTo(passwordInput, "Password too weak");
   } else {
     success(passwordInput);
+    pwValidation = true;
+  }
+  
+  if (regionValue === "Select a Region") {
+    addErrorTo(regionSelect, "Please select a region");
+  } else {
+    success(regionSelect);
+    regionValidation = true
+  }
+
+  if (nameValidation == true && emailValidation == true && pwValidation == true && regionValidation == true) {
+    window.location.href = "/index.html";
   }
 });
 
