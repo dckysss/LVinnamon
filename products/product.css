@@ -67,8 +67,7 @@ body {
   background-color: rgba(255, 255, 255, 0.81);
   backdrop-filter: blur(3px);
   max-width: 23.5rem;
-  min-width: 20rem;
-  padding: 1.25rem;
+  padding: 1.1rem;
   border-radius: 10px;
   border: 1.8px solid rgba(255, 255, 255, 1);
   opacity: 0;
@@ -89,15 +88,15 @@ body {
 
 .desc {
   border-bottom: 1px solid #757575;
-  margin-bottom: 8px;
-  padding: 8px 0;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .add-to-cart {
   font-family: "Poppins", sans-serif;
   padding: 5px 10px;
   background-color: var(--primary);
-  border-radius: 5px;
+  border-radius: 0.313rem;
   font-size: 1.4rem;
   cursor: pointer;
   transition: .3s ease;
@@ -125,7 +124,9 @@ body {
 
 #qty {
   width: 3.5rem;
-  padding: 4px 8px;
+  height: 100%;
+  padding: 0 0.5rem;
+  border-radius: 0.3rem;
   font-size: 1.3rem;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -134,12 +135,12 @@ body {
 
 .qtyBtn {
   font-weight: 600;
-  font-size: 1.5rem;
-  padding: 5px;
+  font-size: 1.55rem;
   background-color: var(--second);
   color: #793600;
   width: 2.2rem;
-  border-radius: 0.25rem;
+  height: 100%;
+  border-radius: 0.3rem;
   cursor: pointer;
 }
 
@@ -149,7 +150,7 @@ body {
 }
 
 .counter {
-  padding-top: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 .original {
@@ -189,7 +190,7 @@ body {
 }
 
 .cart-icon {
-  width: calc(22px + 1.2vmin);
+  width: calc(21px + 1.2vmin);
   opacity: 0.7;
 }
 
@@ -202,7 +203,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 15px 0 10px 0;
+  padding: 0.7rem 0 0.7rem 0;
   border-top: 1px solid #ddd;
 }
 
@@ -233,7 +234,7 @@ body {
   display: flex;
   align-items: center;
   gap: 2px;
-  margin-bottom: 5px;
+  margin-bottom: 0.3rem;
 }
 .rating img {
   width: calc(8px + 1vmin);
@@ -311,18 +312,8 @@ body {
 
 /* Media Queries */
 
-/* Laptop */
-@media (max-width: 1366px) {
-  html {
-    font-size: 75%;
-  }
-}
-
 /* Tablet */
 @media (max-width: 786px) {
-  html {
-    font-size: 62.5%;
-  }
 
   .rating p {
     margin-left: 2px;
@@ -330,20 +321,16 @@ body {
   }
 
   .product-details {
-    padding: 15px;
-    max-width: 25rem;
+    width: 25rem;
+  }
+
+  #qty {
+    padding: 0.3rem;
   }
 }
 
 /* Mobile Phone */
 @media (max-width: 450px) {
-  html {
-    font-size: 55%;
-  }
-
-  .product-details {
-    padding: 10px;
-  }
 
   .product-details-footer {
     display: grid;
@@ -351,7 +338,15 @@ body {
   }
 
   .add-to-cart {
+    margin-top: 0.4rem;
     padding: 2px 7px;
-    font-size: 12px;
+  }
+
+  #qty {
+    width: 3.8rem;
+  }
+  
+  .qtyBtn {
+    width: 2.5rem;
   }
 }

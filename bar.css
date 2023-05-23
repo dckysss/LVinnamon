@@ -202,7 +202,7 @@ footer .copyright {
     font-size: 75%;
   }
   .section-p1 {
-    padding: 60px;
+    padding: 3.75rem;
   }
 
   #contact {
@@ -214,9 +214,6 @@ footer .copyright {
 @media (max-width: 786px) {
   html {
     font-size: 62.5%;
-  }
-  .section-p1 {
-    padding: 60px;
   }
 
   .hamburger {
@@ -291,19 +288,19 @@ footer .copyright {
   }
 
   footer h4 {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   
   footer p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   
   footer a {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   footer .logo {
-    width: 60px;
+    width: 3.75rem;
   }
 }
 
@@ -313,7 +310,7 @@ footer .copyright {
     font-size: 55%;
   }
   .section-p1 {
-    padding: 20px;
+    padding: 1.25rem;
   }
 
   .navbar .navbar-nav {
