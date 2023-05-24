@@ -19,7 +19,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
-  background-image: url("../img/header-location.jpg");
+  background-image: url("../img/main-bg.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -112,10 +112,6 @@ body {
 
 /* Tablet */
 @media (max-width: 768px) {
-  html {
-    font-size: 62.5%;
-  }
-
   .container {
     padding-top: 5rem;
     flex-direction: column;
@@ -132,12 +128,5 @@ body {
 
   .right {
     border-radius: 0 0 1rem 1rem;
-  }
-}
-
-/* Mobile Phone */
-@media (max-width: 450px) {
-  html {
-    font-size: 55%;
   }
 }

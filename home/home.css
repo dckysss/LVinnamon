@@ -191,7 +191,6 @@ body {
 
 /* Mobile Phone */
 @media (max-width: 450px) {
-
   .popup .content .cta {
     padding: 0.8rem 2rem;
   }

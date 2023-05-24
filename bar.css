@@ -186,7 +186,7 @@ footer .icon {
 }
 
 footer .icon img {
-  width: 20px;
+  width: 1.25rem;
 }
 
 footer .copyright {
@@ -288,15 +288,15 @@ footer .copyright {
   }
 
   footer h4 {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   
   footer p {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
   
   footer a {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 
   footer .logo {
@@ -307,7 +307,7 @@ footer .copyright {
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {
-    font-size: 55%;
+    font-size: 58%;
   }
   .section-p1 {
     padding: 1.25rem;

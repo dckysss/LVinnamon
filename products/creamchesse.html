@@ -49,14 +49,26 @@
     <!-- Main Page Product -->
     <div class="product-details-overlay">
       <div class="product-details">
-        <button class="close">&#10005;</button>
-        <img src="../img/product-img.jpg" alt="Product Image" class="card-img">
+        <img src="../img/product-img6.jpg" alt="Product Image" class="card-img">
         <h2>Product Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui laborum, earum nulla officia, a accusamus maxime dolores iusto atque</p>
+        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui laborum, earum nulla officia, a accusamus maxime dolores iusto atque</p>
         <div class="text-price">
-          <h3>Price: Rp59.000</h3>
+          <div class="rating">
+            <img src="../img/star.svg" alt="Rating">
+            <p>4.9 | Best Seller</p>
+            <img src="../img/chef-hat.svg" alt="chef-hat" title="Recommended">
+          </div>
+          <h3>Rp59.000</h3>
+          <s>Rp80.000</s>
         </div>
-        <button class="add-to-cart">Add to Cart</button>
+        <div class="product-details-footer">
+          <div class="counter">
+            <button id="minus" class="qtyBtn">-</button>
+            <input type="text" id="qty" maxlength="3" max="999">
+            <button id="plus" class="qtyBtn">+</button>
+          </div>
+          <button class="add-to-cart"><a href="/register/register.html">Add to Cart</a></button>
+        </div>
       </div>
     </div>
 

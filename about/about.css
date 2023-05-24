@@ -24,7 +24,7 @@ body {
 /* About Section */
 .about {
   padding: 6rem 7%;
-  background-image: url("../img/header-location.jpg");
+  background-image: url("../img/main-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -33,9 +33,9 @@ body {
 
 .about h2 {
   text-align: center;
-  font-size: 2.6rem;
-  margin-top: 3rem;
-  margin-bottom: 4rem;
+  font-size: 2.7rem;
+  margin-top: 3.2rem;
+  margin-bottom: 3.5rem;
   color: var(--primary);
   text-shadow: 1px 1px 5px rgba(255, 205, 165, 0.6);
   -webkit-text-stroke: 1px rgb(255, 255, 255);
@@ -46,7 +46,11 @@ body {
   animation: fadeIn 0.5s ease-in-out;
   border: 1px solid white;
   border-radius: 0.35rem;
+  margin-bottom: 4rem;
   box-shadow: 3px 3px 8px rgba(173, 142, 112, 0.6);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s, transform 0.8s;
 }
 @keyframes fadeIn {
   0% {
@@ -55,6 +59,11 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+.about .container.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about .container .about-img {
@@ -77,22 +86,25 @@ body {
 .content {
   width: 20rem;
   height: 25.2rem;
-  flex: 1 1 30rem;
+  flex: 1 1 40rem;
   height: auto;
-  padding: 0 1rem;
-  background: rgba(241, 219, 191, 0.431);
+  padding: 1rem;
+  background: rgba(240, 221, 197, 0.431);
   backdrop-filter: blur(10px);
-  font-size: 25px;
   font-weight: bold;
-}
-
-p {
-  padding-top: 1rem;
 }
 
 .explore-button {
   text-align: center;
-  margin-top: 2.5rem;
+  margin-top: 5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s, transform 0.5s;
+}
+
+.explore-button.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .explore-button button {
@@ -113,7 +125,7 @@ p {
   font-family: "Poppins", sans-serif;
   color: var(--primary);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: .3s ease;
 }
 
@@ -123,32 +135,21 @@ p {
 
 /* Media Queries */
 
-/* Laptop */
-@media (max-width: 1366px) {
-  html {
-    font-size: 75%;
-  }
-}
-
 /* Tablet */
 @media (max-width: 786px) {
-  html {
-    font-size: 61.5%;
-  }
-
   .about .container {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
-  .content {
+  .about .container .about-img {
+    flex: 1 1 22rem;
+  }
+
+  .content {    
+    width: 100%;
+    flex: 1 1 30rem;
     padding: 1.2rem;
     border-radius: 0 0 0.35rem 0.35rem;
-  }
-
-  .about .container .about-img img {
-    height: 24rem;
-    object-fit: cover;
-    object-position: center;
   }
 
   .about .container .content h3 {
@@ -157,15 +158,7 @@ p {
   }
 
   .about .container .content p {
-    font-size: 1.6rem;
     text-align: justify;
     padding: 0;
-  }
-}
-
-/* Mobile Phone */
-@media (max-width: 450px) {
-  html {
-    font-size: 55%;
   }
 }

@@ -8,6 +8,7 @@ const cart = document.querySelectorAll(".card-button");
 const qty = document.getElementById("qty");
 const increment = document.getElementById("plus");
 const decrement = document.getElementById("minus");
+const elements = document.querySelectorAll(".card");
 
 // Toggle class active on hamburger menu click
 hamburger.onclick = () => {
@@ -59,3 +60,19 @@ decrement.onclick = () => {
     qty.value -= 1;
   }
 }
+
+animateOnScroll = () => {
+  elements.forEach((element) => {
+    const elementPosition = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    
+    if (elementPosition < windowHeight) {
+      element.classList.add("animate");
+    } else {
+      element.classList.remove("animate");
+    }
+  });
+}
+
+window.addEventListener("scroll", animateOnScroll);
+window.addEventListener("load", animateOnScroll);
