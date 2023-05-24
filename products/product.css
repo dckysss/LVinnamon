@@ -21,10 +21,6 @@ body {
   font-family: "Poppins", sans-serif;
   background: rgb(255, 255, 255);
   min-height: 100vh;
-  background: url(../img/main-bg2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-color: #ffe7c783; */
 }
 
 /* Product Session */
