@@ -20,7 +20,6 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background: rgb(255, 255, 255);
-  /* background: linear-gradient(191deg, rgba(255, 255, 255, 0.4990371148459384) 0%, rgba(173, 142, 112, 0.36458333333333337) 70%); */
   min-height: 100vh;
 }
 
