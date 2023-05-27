@@ -18,14 +18,6 @@ setInterval(function () {
   next();
 }, 5000);
 
-function prev() {
-  cls();
-  if (current === 0) current = $slide.length;
-  current--;
-
-  $slide.eq(current).slideDown()
-}
-
 function start() {
   cls();
   $slide.eq(current).stop().slideDown();
