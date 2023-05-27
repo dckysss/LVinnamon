@@ -12,16 +12,6 @@ function next() {
   current++;
 
   $slide.eq(current).slideDown()
-
-  // var x = 0.4;
-  // var intX = setInterval(function () {
-  //   x += 0.1;
-  //   $slide.eq(current).css("opacity", x);
-  //   if (x >= 1) {
-  //     clearInterval(intX);
-  //     x = 0.4;
-  //   }
-  // }, 100);
 }
 
 setInterval(function () {
@@ -34,15 +24,6 @@ function prev() {
   current--;
 
   $slide.eq(current).slideDown()
-  // var x = 0.4;
-  // var intX = setInterval(function () {
-  //   x += 0.1;
-  //   $slide.eq(current).css("opacity", x);
-  //   if (x >= 1) {
-  //     clearInterval(intX);
-  //     x = 0.4;
-  //   }
-  // }, 100);
 }
 
 function start() {
