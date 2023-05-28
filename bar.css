@@ -5,6 +5,10 @@
   --second: #f8ead8;
 }
 
+::selection {
+  background-color: var(--primary);
+}
+
 /* Navbar */
 .navbar {
   display: flex;

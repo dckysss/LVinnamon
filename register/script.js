@@ -27,7 +27,6 @@ form.addEventListener("submit", (e) => {
   var emailValue = emailInput.value.trim();
   var passwordValue = passwordInput.value.trim();
   var regionValue = regionSelect.value;
-  var pattern = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
 
   var nameValidation = false;
   var emailValidation = false;
@@ -41,9 +40,28 @@ form.addEventListener("submit", (e) => {
     nameValidation = true;
   }
 
+  function validateEmail(email) {
+    var atSymbol = email.indexOf("@");
+    var dotSymbol = email.lastIndexOf(".");
+    var spaceSymbol = email.indexOf(" ");
+
+    if ((atSymbol != -1) &&
+        (atSymbol != 0) &&
+        (dotSymbol != -1) &&
+        (dotSymbol != 0) &&
+        (dotSymbol > atSymbol + 1) &&
+        (email.length > dotSymbol + 1) &&
+        (spaceSymbol == -1)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+  
+
   if (emailValue === "") {
     addErrorTo(emailInput, "Email cannot be empty");
-  } else if (!pattern.test(emailValue)) {
+  } else if (!validateEmail(emailValue)) {
     addErrorTo(emailInput, "Looks like not an email (example: example@email.com)");
   } else {
     success(emailInput);
