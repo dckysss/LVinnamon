@@ -31,7 +31,7 @@ main {
   justify-content: center;
   gap: 3rem;
   align-items: center;
-  min-height: 100vh;
+  min-height: 92vh;
   background: url(../img/header-bg.jpg) no-repeat;
   background-size: cover;
   padding: 0px 180px;
@@ -133,7 +133,6 @@ input[type="checkbox"] {
 
 form {
   background-color: white;
-  margin-top: 5rem;
   padding: 1.7rem 3rem 3rem 3rem;
   border-radius: 0.65rem;
   font-weight: 600;
