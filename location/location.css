@@ -20,14 +20,13 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   background-image: url("../img/main-bg.jpg");
-  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .row {
-  height: 100vh;
+  min-height: 90vh;
   margin: auto;
   justify-content: center;
   align-items: center;
@@ -54,11 +53,12 @@ body {
   background: rgba(173, 142, 112, 0.35);
   backdrop-filter: blur(10px);
   border: 2px solid white;
-  padding: 60px 20px;
-  font-size: 25px;
+  padding: 3.75rem 1.25rem;
+  font-size: 1.6rem;
   font-weight: bold;
   border-radius: 0 1rem 1rem 0;
   padding-top: 3rem;
+  overflow: auto;
 }
 
 .hours {
@@ -113,7 +113,6 @@ body {
 /* Tablet */
 @media (max-width: 768px) {
   .container {
-    padding-top: 5rem;
     flex-direction: column;
     align-items: center;
     width: 85%;

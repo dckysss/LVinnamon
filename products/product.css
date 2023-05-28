@@ -34,9 +34,8 @@ body {
   width: 80%;
   display: flex;
   flex-wrap: wrap;
-  gap: 6rem;
-  margin: 4rem auto;
-  padding-top: 6rem;
+  gap: 5rem;
+  margin: 5rem auto;
   justify-content: center;
 }
 
@@ -165,7 +164,7 @@ body {
 }
 
 .chocolate {
-  background-color: rgba(126, 74, 25, 0.467);
+  background-color: rgba(126, 62, 25, 0.467);
 }
 
 .matcha {

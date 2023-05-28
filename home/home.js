@@ -1,18 +1,17 @@
 const navbarNav = document.querySelector(".navbar-nav");
 const hamburger = document.querySelector(".hamburger");
-// const timeDiv = document.getElementById("time");
 const currentDate = new Date();
 const overlay = document.querySelector(".popup-overlay");
 const closeButton = document.querySelector('.close');
 const popUp = document.querySelector(".popup");
+const cards = document.querySelectorAll(".card");
+const evenCards = document.querySelectorAll(".evenCard");
 
-// Toggle class active on hamburger menu click
 hamburger.onclick = () => {
   hamburger.classList.toggle("active");
   navbarNav.classList.toggle("active");
 };
 
-// Click outside sidebar to hide nav
 document.addEventListener("click", function (e) {
   if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove("active");
@@ -25,30 +24,34 @@ document.addEventListener("click", function (e) {
  }
 });
 
-// Date
-// const getTime = () => {
-//   const currentDate = new Date();
-//   const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-//   let day = daysOfWeek[currentDate.getDay()];
-//   let hr = currentDate.getHours();
-//   let min = currentDate.getMinutes();
-//   let sec = currentDate.getSeconds();
-//   let session = "AM";
-//   hr > 12 ? ((session = "PM"), (hr -= 12)) : null;
-//   hr == 0 ? (hr = 12) : null;
-//   sec < 10 ? (sec = "0" + sec) : null;
-//   min < 10 ? (min = "0" + min) : null;
-//   hr < 10 ? (hr = "0" + hr) : null;
-//   timeDiv.textContent = day + ", " + hr + ":" + min + ":" + sec + " " + session;
-// };
-
-// getTime();
-// setInterval(getTime, 1000);
-
 overlay.classList.add("active");
 popUp.classList.add("active");
 
 closeButton.addEventListener("click", () => {
   overlay.classList.remove("active");
   popUp.classList.remove("active");
+});
+
+animateOnScroll = () => {
+  cards.forEach((element) => {
+    const cardPosition = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    
+    if (cardPosition < windowHeight) {
+      element.classList.add("animate");
+    } else {
+      element.classList.remove("animate");
+    }
+  });
+}
+
+window.addEventListener("scroll", animateOnScroll);
+window.addEventListener("load", animateOnScroll);
+
+cards.forEach((card) => {
+  card.addEventListener('click', () => {
+    const productName = card.querySelector('.hover-image').textContent.trim();
+
+    window.location.href = `/products/${productName.toLowerCase().replace(' ', '-')}.html`;
+  });
 });

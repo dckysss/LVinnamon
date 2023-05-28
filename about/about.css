@@ -23,7 +23,7 @@ body {
 
 /* About Section */
 .about {
-  padding: 6rem 7%;
+  padding: 1rem 7%;
   background-image: url("../img/main-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -76,7 +76,6 @@ body {
 }
 
 .about .container p {
-  /* margin-bottom: 0.8rem; */
   font-size: 1.3rem;
   font-weight: 400;
   text-align: justify;
@@ -96,7 +95,7 @@ body {
 
 .explore-button {
   text-align: center;
-  margin-top: 5rem;
+  margin: 5rem;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s, transform 0.5s;

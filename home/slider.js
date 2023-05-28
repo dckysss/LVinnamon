@@ -1,25 +1,14 @@
+$(document).ready(function() {
+  function slideLeft() {
+    var container = $(".container");
+    var firstImg = container.find(".slide-img:first");
+    var imgWidth = firstImg.width();
 
-var $slide = $(".slide");
-var current = 0;
+    container.animate({ marginLeft: -imgWidth }, 'slow', function() {
+      container.append(firstImg);
+      container.css("margin-left", 0);
+    });
+  }
 
-function cls() {
-  $slide.slideUp();
-}
-
-function next() {
-  cls();
-  if (current === $slide.length - 1) current = -1;
-  current++;
-
-  $slide.eq(current).slideDown()
-}
-
-setInterval(function () {
-  next();
-}, 5000);
-
-function start() {
-  cls();
-  $slide.eq(current).stop().slideDown();
-}
-start();
+  setInterval(slideLeft, 5000);
+});
