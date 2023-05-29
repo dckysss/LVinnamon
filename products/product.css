@@ -175,6 +175,10 @@ body {
   background-color: rgba(250, 230, 199, 0.466);
 }
 
+.beverages {
+  background-color: rgba(248, 234, 216, 0.466);
+}
+
 .card-img {
   width: 100%;
   animation: fadeIn 0.5s ease-in;

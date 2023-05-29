@@ -155,12 +155,11 @@ body {
 
 .product-categories {
   display: flex;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   flex-direction: column;
+  padding: 6rem 0;
   text-align: center;
-  justify-content: center;
   align-items: center;
-  padding: 4rem 0;
   overflow-x: hidden;
 }
 
@@ -235,7 +234,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: bold;
   text-shadow: 1px 1px 10px rgba(255, 205, 165, 0.6);
 }
@@ -244,20 +243,12 @@ body {
   opacity: 1;
 }
 
-.original {
+.cinnamon {
   background-color: rgba(190, 171, 154, 0.5);
 }
 
-.chocolate {
-  background-color: rgba(126, 62, 25, 0.5);
-}
-
-.matcha {
-  background-color: rgba(167, 177, 133, 0.5);
-}
-
-.creamcheese {
-  background-color: rgba(250, 230, 199, 0.5);
+.beverages {
+  background-color: rgba(255, 199, 248, 0.5);
 }
 
 .product-categories-container {
@@ -265,8 +256,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 3.5rem;
-  margin: 4rem 0;
-  width: 65%;
+  margin: 5rem 0;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -300,7 +291,7 @@ body {
   }
 
   .product-categories-container {
-    width: 65%;
+    width: 75%;
   }
 
   #time {
