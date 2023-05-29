@@ -263,7 +263,6 @@ footer .copyright {
     color: var(--primary);
     display: block;
     margin: 1.5rem;
-    padding: 0.5rem;
     font-size: 2rem;
   }
 
@@ -289,9 +288,14 @@ footer .copyright {
     clear: none;
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 0;
     border-style: none;
   }
+
+  ul li:hover > ul,
+  ul li ul:hover {
+    padding: 0;
+}
 
   footer .logo {
     width: 3.75rem;
