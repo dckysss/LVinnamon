@@ -277,7 +277,16 @@ body {
   .product-categories-container {
     width: 85%;
   }
+
+  .card-img {
+    transform: scale(1.2);
+  }
+
+  .card-image .hover-image {
+    opacity: 1;
+  }
 }
+
 
 /* Mobile Phone */
 @media (max-width: 450px) {
