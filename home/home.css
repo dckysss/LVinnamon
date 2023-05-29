@@ -140,17 +140,17 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 300%;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .slide-img {
-  width: 100%;
+  width: 33.333%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .product-categories {
@@ -160,13 +160,13 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 4rem 0;
+  padding: 4rem 0;
   overflow-x: hidden;
 }
 
 .card {
   width: 30rem;
-  padding: 0.8em;
+  padding: 0.8rem;
   flex: 0 0 calc(50% - 1.8rem);
   background: #fff;
   overflow: hidden;
@@ -245,19 +245,19 @@ body {
 }
 
 .original {
-  background-color: rgba(190, 171, 154, 0.466);
+  background-color: rgba(190, 171, 154, 0.5);
 }
 
 .chocolate {
-  background-color: rgba(126, 62, 25, 0.467);
+  background-color: rgba(126, 62, 25, 0.5);
 }
 
 .matcha {
-  background-color: rgba(167, 177, 133, 0.466);
+  background-color: rgba(167, 177, 133, 0.5);
 }
 
 .creamcheese {
-  background-color: rgba(250, 230, 199, 0.466);
+  background-color: rgba(250, 230, 199, 0.5);
 }
 
 .product-categories-container {
