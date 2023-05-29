@@ -65,8 +65,8 @@ form.addEventListener("submit", (e) => {
     addErrorTo(emailInput, "Looks like not an email (example: example@email.com)");
   } else {
     success(emailInput);
-    emailValidation = true
-  }
+    emailValidation = true;
+  };
 
   if (passwordValue === "") {
     addErrorTo(passwordInput, "Password cannot be empty");
@@ -75,18 +75,18 @@ form.addEventListener("submit", (e) => {
   } else {
     success(passwordInput);
     pwValidation = true;
-  }
+  };
   
   if (regionValue === "Select a Region") {
     addErrorTo(regionSelect, "Please select a region");
   } else {
     success(regionSelect);
     regionValidation = true
-  }
+  };
 
   if (nameValidation == true && emailValidation == true && pwValidation == true && regionValidation == true) {
     window.location.href = "/index.html";
-  }
+  };
 });
 
 function addErrorTo(req, message) {
@@ -96,7 +96,7 @@ function addErrorTo(req, message) {
   span.innerText = message;
   span.classList.add("error-text");
   req.classList.remove("success");
-}
+};
 
 function success(req) {
   req.classList.remove("error");
@@ -104,4 +104,4 @@ function success(req) {
   const span = req.parentElement.querySelector("span");
   span.innerText = "";
   span.classList.remove("error-text");
-}
+};

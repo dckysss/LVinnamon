@@ -53,13 +53,13 @@ increment.onclick = () => {
     qty.value = currentValue + 1;
   }
   
-}
+};
 
 decrement.onclick = () => {
   if(qty.value > 0) {
     qty.value -= 1;
   }
-}
+};
 
 animateOnScroll = () => {
   elements.forEach((element) => {
@@ -72,7 +72,7 @@ animateOnScroll = () => {
       element.classList.remove("animate");
     }
   });
-}
+};
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);

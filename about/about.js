@@ -27,7 +27,7 @@ animateOnScroll = () => {
       element.classList.remove("animate");
     }
   });
-}
+};
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);

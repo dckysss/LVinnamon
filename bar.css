@@ -237,7 +237,7 @@ footer .copyright {
 
   .navbar-nav {
     position: fixed;
-    top: 58px;
+    top: 5.6rem;
     right: -100%;
     overflow: auto;
     background-color: #fff;
@@ -310,10 +310,6 @@ footer .copyright {
   ul li {
     padding: 0;
     display: grid;
-  }
-
-  .navbar .navbar-nav {
-    top: 50px;
   }
 
 }
