@@ -282,6 +282,8 @@ footer .copyright {
 
   ul li {
     position: static;
+    display: flex;
+    flex-direction: column;
   }
 
   ul li ul li {
@@ -313,7 +315,6 @@ footer .copyright {
 
   ul li {
     padding: 0;
-    display: grid;
   }
 
 }
