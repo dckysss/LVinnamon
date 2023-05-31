@@ -7,7 +7,12 @@ const passwordInput = document.getElementById("password");
 const radioButtons = document.getElementsByName("gender");
 const regionSelect = document.getElementById("region");
 const checkbox = document.getElementById("terms");
-const checkboxError = document.getElementById("checkbox-error")
+const checkboxError = document.getElementById("checkbox-error");
+const overlay = document.querySelector(".popup-overlay");
+const closeButton = document.querySelector('.close');
+const popUp = document.querySelector(".popup");
+const termsCondition = document.getElementById("terms-condition")
+const agreeBtn = document.getElementById("agree")
 
 hamburger.onclick = () => {
   hamburger.classList.toggle("active");
@@ -115,3 +120,19 @@ function success(req) {
   span.innerText = "";
   span.classList.remove("error-text");
 };
+
+termsCondition.addEventListener("click", () => {
+  overlay.classList.add("active");
+  popUp.classList.add("active");
+});
+
+closeButton.addEventListener("click", () => {
+  overlay.classList.remove("active");
+  popUp.classList.remove("active");
+});
+
+agreeBtn.addEventListener("click", () => {
+  checkbox.checked = true;
+  overlay.classList.remove("active");
+  popUp.classList.remove("active");
+})
