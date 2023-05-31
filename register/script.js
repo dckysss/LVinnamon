@@ -7,6 +7,7 @@ const passwordInput = document.getElementById("password");
 const radioButtons = document.getElementsByName("gender");
 const regionSelect = document.getElementById("region");
 const checkbox = document.getElementById("terms");
+const checkboxError = document.getElementById("checkbox-error")
 
 hamburger.onclick = () => {
   hamburger.classList.toggle("active");
@@ -27,11 +28,13 @@ form.addEventListener("submit", (e) => {
   var emailValue = emailInput.value.trim();
   var passwordValue = passwordInput.value.trim();
   var regionValue = regionSelect.value;
+  var termsValue = checkbox.checked;
 
   var nameValidation = false;
   var emailValidation = false;
   var pwValidation = false;
   var regionValidation = false;
+  var termsValidation = false;
 
   if (nameValue === "") {
     addErrorTo(nameInput, "Name cannot be empty");
@@ -84,7 +87,14 @@ form.addEventListener("submit", (e) => {
     regionValidation = true
   };
 
-  if (nameValidation == true && emailValidation == true && pwValidation == true && regionValidation == true) {
+  if (!termsValue) {
+    addErrorTo(checkboxError, "Please accept the terms and conditions");
+  } else {
+    success(checkboxError);
+    termsValidation = true;
+  }
+
+  if (nameValidation == true && emailValidation == true && pwValidation == true && regionValidation == true && termsValidation == true) {
     window.location.href = "/index.html";
   };
 });

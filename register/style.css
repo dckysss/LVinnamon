@@ -129,6 +129,11 @@ input[type="checkbox"] {
 
 .agreement {
   display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  display: flex;
 }
 
 form {
@@ -178,6 +183,11 @@ input.invalid {
 
 .success {
   border: 2px solid hsl(154, 59%, 51%);
+}
+
+#checkbox-error {
+  border: none;
+  background: none;
 }
 
 .btn {
