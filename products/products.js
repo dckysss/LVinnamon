@@ -1,6 +1,5 @@
 const navbarNav = document.querySelector(".navbar-nav");
 const hamburger = document.querySelector(".hamburger");
-const cardInfo = document.querySelectorAll('.card-info');
 const overlay = document.querySelector('.product-details-overlay');
 const productDetails = document.querySelector('.product-details');
 const closeButton = document.querySelector('.close');
@@ -8,28 +7,26 @@ const cart = document.querySelectorAll(".card-button");
 const qty = document.getElementById("qty");
 const increment = document.getElementById("plus");
 const decrement = document.getElementById("minus");
-const elements = document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".card");
 
-// Toggle class active on hamburger menu click
 hamburger.onclick = () => {
   hamburger.classList.toggle("active");
   navbarNav.classList.toggle("active");
 };
 
-// Click outside sidebar to hide nav
 document.addEventListener("click", function (e) {
   if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove("active");
     hamburger.classList.remove("active");
-  }
+  };
 
   if (overlay.contains(e.target) && !productDetails.contains(e.target)) {
      overlay.classList.remove('active');
      productDetails.classList.remove('active');
-  }
+  };
 });
 
-cardInfo.forEach(button => {
+cards.forEach(button => {
   button.addEventListener('click', () => {
     overlay.classList.add('active');
     productDetails.classList.add('active');
@@ -38,35 +35,35 @@ cardInfo.forEach(button => {
 });
 
 cart.forEach(button => {
-  button.addEventListener('click', () => {
-    alert("Added to cart successfully!");
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    window.location.href = "../register/register.html";
   });
 });
 
 qty.oninput = () => {
-  qty.value = qty.value.replace(/\D/g, "");
-}
+  qty.value = qty.value.split("").filter(char => !isNaN(parseInt(char))).join("");
+};
 
 increment.onclick = () => {
   const currentValue = parseInt(qty.value);
   if(qty.value < 999) {
     qty.value = currentValue + 1;
-  }
-  
+  };
 };
 
 decrement.onclick = () => {
   if(qty.value > 0) {
     qty.value -= 1;
-  }
+  };
 };
 
 animateOnScroll = () => {
-  elements.forEach((element) => {
-    const elementPosition = element.getBoundingClientRect().top;
+  cards.forEach((element) => {
+    const cardPosition = element.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
     
-    if (elementPosition < windowHeight) {
+    if (cardPosition < windowHeight) {
       element.classList.add("animate");
     } else {
       element.classList.remove("animate");
