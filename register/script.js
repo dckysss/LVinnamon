@@ -99,7 +99,7 @@ form.addEventListener("submit", (e) => {
     termsValidation = true;
   }
 
-  if (nameValidation == true && emailValidation == true && pwValidation == true && regionValidation == true && termsValidation == true) {
+  if (nameValidation === true && emailValidation === true && pwValidation === true && regionValidation === true && termsValidation === true) {
     window.location.href = "/index.html";
   };
 });
