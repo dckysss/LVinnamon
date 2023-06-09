@@ -53,7 +53,7 @@ increment.onclick = () => {
 };
 
 decrement.onclick = () => {
-  if(qty.value > 0) {
+  if(qty.value > 1) {
     qty.value -= 1;
   };
 };
